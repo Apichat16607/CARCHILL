@@ -1,0 +1,85 @@
+
+.login {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* เปลี่ยนเส้นขอบให้โปร่งใส */
+    width: 50%;
+    height: 60%;
+    margin-left: 25%;
+    margin-top: 10%;
+    background: rgba(30, 30, 30, 0.8); /* ปรับพื้นหลังให้เข้มขึ้น */
+    color: #ffffff; /* สีตัวอักษรขาว */
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+}
+
+form {
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(70%);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: Arial, sans-serif; /* เปลี่ยนฟอนต์ให้ชัดเจน */
+}
+
+h1 {
+    font-weight: bold; /* ทำให้ตัวหนาขึ้น */
+    font-size: 40px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7); /* เพิ่มความชัดเจนให้กับเงา */
+    margin-bottom: 20px;
+}
+
+label {
+    color: rgba(255, 255, 255, 0.9); /* สีที่ชัดเจนขึ้น */
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.2); /* ทำให้พื้นหลังของ input โปร่งใส */
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.9); /* ปรับพื้นหลังของปุ่มให้ชัดเจน */
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px; /* ทำให้มุมปุ่มมนขึ้น */
+    margin: 10px 0px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    color: black;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+}
+
+a {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9); /* ทำให้ลิงก์ชัดเจนขึ้น */
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header, main {
+    position: relative;
+    z-index: 1;
+}
