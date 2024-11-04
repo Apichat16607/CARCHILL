@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarCraft</title>
+    <link rel="icon" href="VIDEO/sedan.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="VIDEO/carchill.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <h1>CarCraft</h1>
+        <ul>
+            <li><a href="index.html"><span class="text">HOME</span></a></li>
+            <li><a href="LOGIN.html"><span class="text">LOGIN</span></a></li>
+            <li><a href="shopping.html"><span class="text">SHOPPING</span></a></li>
+            <li><a href="Contact.html"><span class="text">CONTACT</span></a></li>
+        </ul>
+    </header>
+
+    <main>
+        
+
+        <section id="categories">
+            <h2>CATEGORY</h2>
+            <ul>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#popular-products">POPULAR PRODUCTS</a></li>
+                <li><a href="#products-year">YEAR</a></li>
+            </ul>
+        </section>
+
+        <section id="products">
+            <h2>PRODUCTS</h2>
+            <div class="grid-container">
+                <!-- รายการสินค้า -->
+                <article>
+                    <h3><a href="#" onclick="showModal('product1')">VIOS</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/3z-z518000374221.png" alt="PRODUCT 1" class="product-image">
+                    <p>VIOS</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 2,500 บาท</p>
+                    <button onclick="addToCart('VIOS', 2500)">เพิ่มลงตะกร้า</button>
+                </article>
+                
+                <article>
+                    <h3><a href="#" onclick="showModal('product2')">CITY</a></h3>
+                    <img src="https://www.smilecarrentalubon.com/wp-content/uploads/2020/05/57b062555be38f73a6df2b9a42268cb4a501c3b0.png" alt="PRODUCT 1" class="product-image">
+                    <p>CITY</p>
+                    <p>Year: 2021</p>
+                    <p>ราคา: 1,800 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CITY', 1800)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product3')">ACCORD</a></h3>
+                    <img src="https://www.kaptenhonda.com/wp-content/uploads/2019/12/Accord-PNG.png" alt="PRODUCT 1" class="product-image">
+                    <p>ACCORD</p>
+                    <p>Year: 2019</p>
+                    <p>ราคา: 3,200 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('ACCORD', 100)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product4')">HRV</a></h3>
+                    <img src="https://www.pngmart.com/files/22/Honda-HR-V-PNG-Isolated-Pic.png" alt="PRODUCT 1" class="product-image">
+                    <p>HRV</p>
+                    <p>Year: 2022</p>
+                    <p>ราคา: 1,600 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('HRV', 1600)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product5')">CIVIC</a></h3>
+                    <img src="https://www.pngmart.com/files/22/Honda-Civic-EG-Hatch-PNG-Free-Download.png" alt="PRODUCT 1" class="product-image">
+                    <p>CIVIC</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 4,100 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CIVIC', 4100)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product6')">YARIS</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/3Platinum-White-Pearlz-z1568603143849.png" alt="PRODUCT 1" class="product-image">
+                    <p>YARIS</p>
+                    <p>Year: 2023</p>
+                    <p>ราคา: 2,750 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('YARIS', 2750)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product7')">ALTIS</a></h3>
+                    <img src="https://static.wixstatic.com/media/2a4c71_7c21ac8b5ed44990b999930a08d809c5~mv2.png/v1/fill/w_388,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/76b8788654d4b0b6d1022767b3854e2fd09c610e4b20021f10847f3776b9ac4c.png" alt="PRODUCT 1" class="product-image">
+                    <p>ALTIS</p>
+                    <p>Year: 2018</p>
+                    <p>ราคา: 900 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('ALTIS', 900)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product8')">CAMRY</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/1z-z1040090560554.png" alt="PRODUCT 1" class="product-image">
+                    <p>CAMRY</p>
+                    <p>Year: 2021</p>
+                    <p>ราคา: 3,600 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CAMRY', 3600)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product9')">JAZZ</a></h3>
+                    <img src="https://www.pngplay.com/wp-content/uploads/13/Honda-Jazz-Background-PNG.png" alt="PRODUCT 1" class="product-image">
+                    <p>JAZZ</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 1,200 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('JAZZ', 1200)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product10')">BMW</a></h3>
+                    <img src="https://img.pcauto.com/model/images/touPic/th/BMW-M5-Sedan_1187.png" alt="PRODUCT 1" class="product-image">
+                    <p>BMW</p>
+                    <p>Year: 2022</p>
+                    <p>ราคา: 5,000 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('BMW', 5000)">เพิ่มลงตะกร้า</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="popular-products">
+            <h2>POPULAR PRODUCTS</h2>
+            <div class="grid-container">
+                <article>
+                    <h3><a href="#" onclick="showModal('popProduct1')">BMW</a></h3>
+                    <img src="https://img.pcauto.com/model/images/touPic/th/BMW-M5-Sedan_1187.png" alt="PRODUCT 1" class="product-image">
+                    <p>BMW</p>
+                    <p>Year: 2022</p>
+                    <p>ราคา: 5,000 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('BMW', 5000)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('popProduct2')">CIVIC</a></h3>
+                    <img src="https://www.pngmart.com/files/22/Honda-Civic-EG-Hatch-PNG-Free-Download.png" alt="PRODUCT 1" class="product-image">
+                    <p>CIVIC</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 4,100 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CIVIC', 4100)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('popProduct3')">CAMRY</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/1z-z1040090560554.png" alt="PRODUCT 1" class="product-image">
+                    <p>CAMRY</p>
+                    <p>Year: 2021</p>
+                    <p>ราคา: 3,600 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CAMRY', 3600)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('popProduct4')">ACCORD</a></h3>
+                    <img src="https://www.kaptenhonda.com/wp-content/uploads/2019/12/Accord-PNG.png" alt="PRODUCT 1" class="product-image">
+                    <p>ACCORD</p>
+                    <p>Year: 2019</p>
+                    <p>ราคา: 3,200 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('ACCORD', 3200)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product6')">YARIS</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/3Platinum-White-Pearlz-z1568603143849.png" alt="PRODUCT 1" class="product-image">
+                    <p>YARIS</p>
+                    <p>Year: 2023</p>
+                    <p>ราคา: 2,750 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('YARIS', 2750)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product1')">VIOS</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/3z-z518000374221.png" alt="PRODUCT 1" class="product-image">
+                    <p>VIOS</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 2,500 บาท</p>
+                    <button onclick="addToCart('VIOS', 2500)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product2')">CITY</a></h3>
+                    <img src="https://www.smilecarrentalubon.com/wp-content/uploads/2020/05/57b062555be38f73a6df2b9a42268cb4a501c3b0.png" alt="PRODUCT 1" class="product-image">
+                    <p>CITY</p>
+                    <p>Year: 2021</p>
+                    <p>ราคา: 1,800 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CITY', 1800)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product4')">HRV</a></h3>
+                    <img src="https://www.pngmart.com/files/22/Honda-HR-V-PNG-Isolated-Pic.png" alt="PRODUCT 1" class="product-image">
+                    <p>HRV</p>
+                    <p>Year: 2022</p>
+                    <p>ราคา: 1,600 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('HRV', 1600)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product9')">JAZZ</a></h3>
+                    <img src="https://www.pngplay.com/wp-content/uploads/13/Honda-Jazz-Background-PNG.png" alt="PRODUCT 1" class="product-image">
+                    <p>JAZZ</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 1,200 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('JAZZ', 1200)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product7')">ALTIS</a></h3>
+                    <img src="https://static.wixstatic.com/media/2a4c71_7c21ac8b5ed44990b999930a08d809c5~mv2.png/v1/fill/w_388,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/76b8788654d4b0b6d1022767b3854e2fd09c610e4b20021f10847f3776b9ac4c.png" alt="PRODUCT 1" class="product-image">
+                    <p>ALTIS</p>
+                    <p>Year: 2018</p>
+                    <p>ราคา: 900 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('ALTIS', 900)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+            </div>
+        </section>
+        <section id="products-year">
+            <h2>PRODUCTS YEAR</h2>
+            <div class="grid-container">
+                <article>
+                    <h3><a href="#" onclick="showModal('product6')">YARIS</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/3Platinum-White-Pearlz-z1568603143849.png" alt="PRODUCT 1" class="product-image">
+                    <p>YARIS</p>
+                    <p>Year: 2023</p>
+                    <p>ราคา: 2,750 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('YARIS', 2750)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product4')">HRV</a></h3>
+                    <img src="https://www.pngmart.com/files/22/Honda-HR-V-PNG-Isolated-Pic.png" alt="PRODUCT 1" class="product-image">
+                    <p>HRV</p>
+                    <p>Year: 2022</p>
+                    <p>ราคา: 1,600 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('HRV', 1600)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product10')">BMW</a></h3>
+                    <img src="https://img.pcauto.com/model/images/touPic/th/BMW-M5-Sedan_1187.png" alt="PRODUCT 1" class="product-image">
+                    <p>BMW</p>
+                    <p>Year: 2022</p>
+                    <p>ราคา: 5,000 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('BMW', 5000)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product2')">CITY</a></h3>
+                    <img src="https://www.smilecarrentalubon.com/wp-content/uploads/2020/05/57b062555be38f73a6df2b9a42268cb4a501c3b0.png" alt="PRODUCT 1" class="product-image">
+                    <p>CITY</p>
+                    <p>Year: 2021</p>
+                    <p>ราคา: 1,800 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CITY', 1800)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('popProduct3')">CAMRY</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/1z-z1040090560554.png" alt="PRODUCT 1" class="product-image">
+                    <p>CAMRY</p>
+                    <p>Year: 2021</p>
+                    <p>ราคา: 3,600 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CAMRY', 3600)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('popProduct2')">CIVIC</a></h3>
+                    <img src="https://www.pngmart.com/files/22/Honda-Civic-EG-Hatch-PNG-Free-Download.png" alt="PRODUCT 1" class="product-image">
+                    <p>CIVIC</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 4,100 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('CIVIC', 4100)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product9')">JAZZ</a></h3>
+                    <img src="https://www.pngplay.com/wp-content/uploads/13/Honda-Jazz-Background-PNG.png" alt="PRODUCT 1" class="product-image">
+                    <p>JAZZ</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 1,200 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('JAZZ', 1200)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product1')">VIOS</a></h3>
+                    <img src="https://itp1.itopfile.com/ImageServer/z_itp_21042021jnto/0/0/3z-z518000374221.png" alt="PRODUCT 1" class="product-image">
+                    <p>VIOS</p>
+                    <p>Year: 2020</p>
+                    <p>ราคา: 2,500 บาท</p>
+                    <button onclick="addToCart('VIOS', 2500)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('popProduct4')">ACCORD</a></h3>
+                    <img src="https://www.kaptenhonda.com/wp-content/uploads/2019/12/Accord-PNG.png" alt="PRODUCT 1" class="product-image">
+                    <p>ACCORD</p>
+                    <p>Year: 2019</p>
+                    <p>ราคา: 3,200 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('ACCORD', 3200)">เพิ่มลงตะกร้า</button>
+                </article>
+                <article>
+                    <h3><a href="#" onclick="showModal('product7')">ALTIS</a></h3>
+                    <img src="https://static.wixstatic.com/media/2a4c71_7c21ac8b5ed44990b999930a08d809c5~mv2.png/v1/fill/w_388,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/76b8788654d4b0b6d1022767b3854e2fd09c610e4b20021f10847f3776b9ac4c.png" alt="PRODUCT 1" class="product-image">
+                    <p>ALTIS</p>
+                    <p>Year: 2018</p>
+                    <p>ราคา: 900 บาท</p> <!-- เพิ่มราคา -->
+                    <button onclick="addToCart('ALTIS', 900)">เพิ่มลงตะกร้า</button> <!-- ส่งราคาผ่านฟังก์ชัน -->
+                </article>
+                
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <h3>CarCraft</h3>
+            <p>นึกถึงชุดแต่งรถนึกถึงเรา CarCraft</p>
+            <ul class="socials">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CarCraft. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+    
+    <style>
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .footer-content {
+        margin-bottom: 10px;
+    }
+    
+    .footer-content h3 {
+        margin: 0;
+    }
+    
+    .socials {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .socials li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    .socials a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .footer-bottom {
+        font-size: 14px;
+    }
+    </style>
+</body>
+</html>
